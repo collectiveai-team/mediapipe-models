@@ -1,0 +1,4 @@
+mediapipe==0.10.14
+
+rich>=13.7.1
+pydantic>=2.7.1
