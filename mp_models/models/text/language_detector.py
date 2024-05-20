@@ -29,7 +29,7 @@ class LanguageDetector(MPDetector):
     ) -> list[LanguageDetectorOutput]:
         detections = self.detector.detect(text=detector_input.text).detections
         if not detections:
-            return LanguageDetectorOutput()
+            return []
 
         return [
             LanguageDetectorOutput(
