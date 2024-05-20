@@ -34,11 +34,9 @@ class MPDetector(ABC):
         out_path = os.path.join(self.local_model_path, file_name)
 
         self._download_model(out_path=out_path, model_url=model_url)
-        self.options = python.text.LanguageDetectorOptions(
-            base_options=python.BaseOptions(
-                delegate=DEVICE_MAP.get(device, "cpu"),
-                model_asset_path=out_path,
-            )
+        self.base_options = python.BaseOptions(
+            delegate=DEVICE_MAP.get(device, "cpu"),
+            model_asset_path=out_path,
         )
 
     def _download_model(self, out_path: str, model_url: str) -> None:
