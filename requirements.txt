@@ -1,4 +1,4 @@
 mediapipe==0.10.14
-
-rich>=13.7.1
 pydantic>=2.7.1
+
+common @ git+ssh://git@github.com/collectiveai-team/common.git@v1.0.2

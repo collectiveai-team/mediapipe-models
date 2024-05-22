@@ -8,7 +8,7 @@ from pydantic import BaseModel
 from mediapipe.tasks import python
 from abc import ABC, abstractmethod
 
-from mp_models.utils.path import create_path
+from common.utils.path import create_path
 
 
 DEVICE_MAP = {
