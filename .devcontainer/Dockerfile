@@ -12,16 +12,12 @@ RUN --mount=type=cache,target=/var/cache/apt \
     htop \
     unzip \
     git-core \
-    openssh-client \
-    inetutils-ping \
-    telnet \
     python${PYTHON_VERSION} \
     python${PYTHON_VERSION}-dev \
     python3-setuptools \
     ca-certificates \
     libgl1 \
     libglib2.0-0 \
-    mesa-utils \
     && apt-get autoremove -y \
     && apt-get clean \
     && rm -rf /var/tmp/* /var/lib/apt/lists/*

@@ -10,10 +10,15 @@ from mp_models.meta import (
 class LanguageDetector(MPDetector):
     def __init__(
         self,
-        model_url_path: str = "language_detector/language_detector/float32/1/language_detector.tflite",  # noqa
+        model_url_path: str = "language_detector/language_detector/float32/latest/language_detector.tflite",  # noqa
         min_confidence: float = 0.1,
+        device="cpu",
     ):
-        super().__init__(model_url_path=model_url_path)
+        super().__init__(
+            model_url_path=model_url_path,
+            device=device,
+        )
+
         options = python.text.LanguageDetectorOptions(
             base_options=self.base_options,
             score_threshold=min_confidence,

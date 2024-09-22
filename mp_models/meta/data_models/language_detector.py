@@ -1,4 +1,3 @@
-from typing import Optional
 from pydantic import BaseModel, StrictStr, NonNegativeFloat
 
 
@@ -7,5 +6,5 @@ class LanguageDetectorInput(BaseModel):
 
 
 class LanguageDetectorOutput(BaseModel):
-    language: Optional[StrictStr] = None
-    confidence: Optional[NonNegativeFloat] = None
+    language: StrictStr | None = None
+    confidence: NonNegativeFloat | None = None

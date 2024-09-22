@@ -8,7 +8,11 @@ from pydantic import BaseModel
 from mediapipe.tasks import python
 from abc import ABC, abstractmethod
 
+from common.logger import get_logger
 from common.utils.path import create_path
+
+
+logger = get_logger(__name__)
 
 
 DEVICE_MAP = {
@@ -25,7 +29,6 @@ class MPDetector(ABC):
         local_model_path: str = "/resources/models",
         base_model_url: str = "https://storage.googleapis.com/mediapipe-models",  # noqa
     ):
-
         self.local_model_path = local_model_path
         create_path(self.local_model_path)
 
@@ -43,6 +46,7 @@ class MPDetector(ABC):
         if os.path.isfile(out_path):
             return
 
+        logger.info(f"downloading model: {model_url}")
         req = requests.get(model_url)
         assert req.status_code == 200
 
