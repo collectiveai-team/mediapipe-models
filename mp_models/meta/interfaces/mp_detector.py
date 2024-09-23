@@ -3,7 +3,7 @@ import requests
 
 import mediapipe as mp
 
-from typing import Optional
+from typing import Any
 from pydantic import BaseModel
 from mediapipe.tasks import python
 from abc import ABC, abstractmethod
@@ -54,5 +54,5 @@ class MPDetector(ABC):
             f.write(req.content)
 
     @abstractmethod
-    def detect(self, detector_input: BaseModel) -> Optional[BaseModel]:
+    def detect(self, detector_input: BaseModel) -> Any:
         pass
