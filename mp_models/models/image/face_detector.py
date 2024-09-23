@@ -55,7 +55,7 @@ class FaceDetector(MPDetector):
 
         detections = self.detector.detect(mp_image).detections
         if not detections:
-            return
+            return []
 
         return [
             self._parse_detections(detection=detection)
