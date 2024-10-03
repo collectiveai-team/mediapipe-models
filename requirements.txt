@@ -1,4 +1,4 @@
 mediapipe==0.10.15
-pydantic>=2.8.2
+pydantic>=2.9.2
 
-common @ git+https://git@github.com/aureka-team/common.git@v1.0.13
+common @ git+https://git@github.com/aureka-team/common.git@v1.1.0

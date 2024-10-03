@@ -1,8 +1,8 @@
 {
-	"name": "mp-models",
-	"dockerComposeFile": "docker-compose.yml",
-	"service": "mp-models-devcontainer",
-	"workspaceFolder": "/workspace",
+    "name": "mp-models",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "mp-models-devcontainer",
+    "workspaceFolder": "/workspace",
     "customizations": {
         "vscode": {
             "settings": {
@@ -39,5 +39,5 @@
             ]
         }
     },
-	"postCreateCommand": "bash .devcontainer/entrypoint.sh"
+    "postCreateCommand": "bash .devcontainer/entrypoint.sh"
 }
