@@ -14,4 +14,4 @@ services:
             - ..:/workspace:cached
             - ../resources/:/resources
         # This keeps the devcontainer running.
-        entrypoint: ["tail", "-f", "/dev/null"]
+        entrypoint: [ "tail", "-f", "/dev/null" ]
